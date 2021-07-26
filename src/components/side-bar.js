@@ -1,20 +1,33 @@
 import * as React from "react"
 import { graphql, useStaticQuery } from "gatsby"
+import { Link } from "gatsby"
 
 const SideBar = () => {
-  const data = useStaticQuery(graphql`
+  const { allMdx } = useStaticQuery(graphql`
     query {
-      allFile {
+      allMdx(sort: { fields: frontmatter___id, order: ASC }) {
         nodes {
-          name
+          frontmatter {
+            id
+            title
+          }
+          fields {
+            slug
+          }
+          id
+          body
         }
       }
     }
   `)
+  console.log(allMdx.nodes[0].id)
+  console.log("aaa")
   return (
     <ul>
-      {data.allFile.nodes.map(node => (
-        <li key={node.name}>{node.name}</li>
+      {allMdx.nodes.map(({ frontmatter, fields }) => (
+        <li key={frontmatter.id}>
+          <Link to={fields.slug}>{frontmatter.title}</Link>
+        </li>
       ))}
     </ul>
   )

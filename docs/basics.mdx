@@ -1,0 +1,49 @@
+---
+title: "Basics"
+id: 1
+---
+
+## Basics
+
+### Installation
+
+Npm:
+
+```
+npm i checc
+```
+
+Yarn:
+
+```
+yarn add checc
+```
+
+### Usage
+
+To perform validation, the asynchronous `checc` function is used. It accepts an object of data, on which the checks will be performed, and a validation schema.
+
+```
+import checc from 'checc';
+
+const data = { username: 'bob' };
+const schema = {
+  username: {
+    type: 'string',
+    minLength: 2,
+    maxLength: [20, 'Way too long mate'],
+  },
+};
+
+const { isValid, errors } = await checc(data, schema);
+```
+
+You can set a specific message by passing a two element array to the validator. The return value of the above invocation is `{ isValid: true, errors: {} }`.
+
+### Maintaining schema
+
+To maintain the schema even for fields with no errors set `keepSchema` to `true`:
+
+`checc(data, schema, { keepSchema: true })`
+
+In this case `errors` will be `{ username: [] }`. This can be useful for when you want to map over the errors to display them in a UI.

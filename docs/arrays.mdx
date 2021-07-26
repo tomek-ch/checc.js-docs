@@ -1,0 +1,27 @@
+---
+title: "Arrays"
+id: 3
+---
+
+## Arrays
+
+You can use the `all` validator to check all elements in an array:
+
+```
+const schema = {
+  items: {
+    // Checks for the array itself
+    isArray: true,
+    minLength: 1,
+    maxLength: 5,
+    all: {
+      // Checks for elements in the array
+      type: 'string',
+      minLength: 2,
+      maxLength: 20,
+    },
+  },
+};
+```
+
+To check whether the passed value is an array, use the `isArray` validator. To validate the length of the array, use `minLength` and `maxLength`.

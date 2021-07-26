@@ -1,0 +1,36 @@
+---
+title: "Custom validators"
+id: 2
+---
+
+## Custom validators
+
+You can perform any sort of validation you want by using a custom validator:
+
+```
+const schema = {
+  repeatPassword: {
+    custom: (repeat, { data }) => {
+	  if (repeat !== data.password)
+	    return Promise.reject('Passwords must match');
+    },
+  },
+};
+```
+
+The first argument passed to a validator is the value of the field that is being validated (in this case `repeatPassword`). The second argument is a context object from which you can access all of the data. To fail a check, return a rejected `Promise` and pass your error message to it.
+
+### Multiple custom validators
+
+To use multiple custom validators on a field, put them in an array:
+
+```
+const schema = {
+  username: {
+    custom: [
+      username => {},
+      username => {},
+    ],
+  },
+};
+```
