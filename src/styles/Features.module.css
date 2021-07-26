@@ -1,0 +1,16 @@
+.features {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1em;
+  padding-bottom: 2em;
+}
+
+.features > div {
+  padding: 2em;
+  border: 1px solid lightgray;
+  border-radius: var(--radius);
+}
+
+.features h3 {
+  margin-bottom: 0.5em;
+}

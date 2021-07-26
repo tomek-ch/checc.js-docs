@@ -1,28 +1,50 @@
 import * as React from "react"
 import { Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
 
+import { ctaBtn } from "../styles/CtaBtn.module.css"
+import { welcome } from "../styles/WelcomeSection.module.css"
+import { features } from "../styles/Features.module.css"
 import Layout from "../components/layout"
-import Seo from "../components/seo"
 
 const IndexPage = () => (
   <Layout>
-    <Seo title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <StaticImage
-      src="../images/gatsby-astronaut.png"
-      width={300}
-      quality={95}
-      formats={["AUTO", "WEBP", "AVIF"]}
-      alt="A Gatsby astronaut"
-      style={{ marginBottom: `1.45rem` }}
-    />
-    <p>
-      <Link to="/page-2/">Go to page 2</Link> <br />
-      <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
-    </p>
+    <div className={welcome}>
+      <h1>Reusable validation</h1>
+      <p>For your front-end and back-end.</p>
+      <Link to="/docs" className={ctaBtn}>
+        Get started
+      </Link>
+    </div>
+    <div className={features}>
+      <div>
+        <h3>Declarative</h3>
+        <p>
+          Specify validation rules as schemas using simple JavaScript objects.
+          No more ifs and pushes.
+        </p>
+      </div>
+      <div>
+        <h3>Portable</h3>
+        <p>
+          Why write the same thing twice? Reuse validation schemas across your
+          front-end and back-end.
+        </p>
+      </div>
+      <div>
+        <h3>Composable</h3>
+        <p>
+          Reuse basic schemas with the spread operator and add on to them. No
+          magic, pure ES6.
+        </p>
+      </div>
+      <div>
+        <h3>Extensible</h3>
+        <p>
+          Embed your own validators and create smart error messages. No need to
+          repeat yourself.
+        </p>
+      </div>
+    </div>
   </Layout>
 )
 

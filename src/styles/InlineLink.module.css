@@ -1,0 +1,8 @@
+.inlineLink {
+  color: var(--highlight);
+  transition: all 150ms;
+}
+
+.inlineLink:hover {
+  color: var(--highlight-dark);
+}

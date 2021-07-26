@@ -1,0 +1,9 @@
+.footerOuter {
+  border-top: 1px solid lightgray;
+}
+
+.footerInner {
+  max-width: 1000px;
+  margin: auto;
+  padding: 1em;
+}

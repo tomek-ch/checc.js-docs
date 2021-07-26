@@ -1,0 +1,31 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --highlight: rebeccapurple;
+  --highlight-dark: rgb(90, 46, 134);
+  --radius: 5px;
+}
+
+::selection {
+  background-color: var(--highlight);
+  color: white;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+input {
+  border: none;
+  font-size: inherit;
+}
