@@ -3,10 +3,17 @@
   min-width: 10em;
 }
 
-.sideBar > li {
-  margin-bottom: 0.5em;
+.sideBar > li > a {
+  display: block;
+  padding: 0.5em;
+  border-radius: var(--radius);
+}
+
+.sideBar > li > a:not(.activeLink):hover {
+  background-color: lightgray;
 }
 
 .activeLink {
-  color: var(--highlight);
+  background-color: var(--highlight);
+  color: white;
 }
