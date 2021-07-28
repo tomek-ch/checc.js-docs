@@ -51,18 +51,18 @@ const IndexPage = () => (
       <div>
         <h4>Front-end or back-end?</h4>
         <div className={linksRow}>
-          <Link
-            to="https://github.com/tomek-ch/checc-example-react"
+          <a
+            href="https://github.com/tomek-ch/checc-example-react"
             className={ctaBtn}
           >
             React example
-          </Link>
-          <Link
-            to="https://github.com/tomek-ch/checc-example-express"
+          </a>
+          <a
+            href="https://github.com/tomek-ch/checc-example-express"
             className={ctaBtn}
           >
             Express example
-          </Link>
+          </a>
         </div>
       </div>
       <div>
