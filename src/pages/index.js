@@ -4,8 +4,8 @@ import { Link } from "gatsby"
 import { ctaBtn } from "../styles/CtaBtn.module.css"
 import { welcome } from "../styles/WelcomeSection.module.css"
 import { features } from "../styles/Features.module.css"
-import { inlineLink } from "../styles/InlineLink.module.css"
 import Layout from "../components/layout"
+import { linksRow, linksHeading } from "../styles/LinksSection.module.css"
 
 const IndexPage = () => (
   <Layout>
@@ -46,29 +46,36 @@ const IndexPage = () => (
         </p>
       </div>
     </div>
-    <div>
-      <p>Front-end or back-end?</p>
-      <Link
-        to="https://github.com/tomek-ch/checc-example-react"
-        className={inlineLink}
-      >
-        React example
-      </Link>
-      <Link
-        to="https://github.com/tomek-ch/checc-example-express"
-        className={inlineLink}
-      >
-        Express example
-      </Link>
-    </div>
-    <div>
-      <p>See the referece</p>
-      <Link
-        to="https://github.com/tomek-ch/checc-example-express"
-        className={inlineLink}
-      >
-        Get started
-      </Link>
+    <h3 className={linksHeading}>Get started with Checc.js</h3>
+    <div className={features}>
+      <div>
+        <h4>Front-end or back-end?</h4>
+        <div className={linksRow}>
+          <Link
+            to="https://github.com/tomek-ch/checc-example-react"
+            className={ctaBtn}
+          >
+            React example
+          </Link>
+          <Link
+            to="https://github.com/tomek-ch/checc-example-express"
+            className={ctaBtn}
+          >
+            Express example
+          </Link>
+        </div>
+      </div>
+      <div>
+        <h4>See the referece</h4>
+        <div className={linksRow}>
+          <Link
+            to="https://github.com/tomek-ch/checc-example-express"
+            className={ctaBtn}
+          >
+            Go to docs
+          </Link>
+        </div>
+      </div>
     </div>
   </Layout>
 )
