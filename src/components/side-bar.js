@@ -2,6 +2,8 @@ import * as React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import { Link } from "gatsby"
 
+import { sideBar } from "../styles/SideBar.module.css"
+
 const SideBar = () => {
   const { allMdx } = useStaticQuery(graphql`
     query {
@@ -23,7 +25,7 @@ const SideBar = () => {
   console.log(allMdx.nodes[0].id)
   console.log("aaa")
   return (
-    <ul>
+    <ul className={sideBar}>
       {allMdx.nodes.map(({ frontmatter, fields }) => (
         <li key={frontmatter.id}>
           <Link to={fields.slug}>{frontmatter.title}</Link>

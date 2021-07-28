@@ -1,0 +1,8 @@
+.sideBar {
+  list-style-type: none;
+  min-width: 10em;
+}
+
+.sideBar > li {
+  margin-bottom: 0.5em;
+}
