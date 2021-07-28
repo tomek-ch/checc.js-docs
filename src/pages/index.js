@@ -20,8 +20,8 @@ const IndexPage = () => (
       <div>
         <h3>Declarative</h3>
         <p>
-          Specify validation rules as schemas using simple JavaScript objects.
-          No more ifs and pushes.
+          Specify validation rules as schemas using objects. No more ifs and
+          pushes.
         </p>
       </div>
       <div>
