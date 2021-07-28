@@ -12,7 +12,7 @@ const IndexPage = () => (
     <div className={welcome}>
       <h1>Reusable validation</h1>
       <p>For your front-end and back-end.</p>
-      <Link to="/docs" className={ctaBtn}>
+      <Link to="/docs/basics" className={ctaBtn}>
         Get started
       </Link>
     </div>
