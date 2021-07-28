@@ -44,6 +44,8 @@ You can set a specific message by passing a two element array to the validator. 
 
 To maintain the schema even for fields with no errors set `keepSchema` to `true`:
 
-`checc(data, schema, { keepSchema: true })`
+```
+checc(data, schema, { keepSchema: true })
+```
 
 In this case `errors` will be `{ username: [] }`. This can be useful for when you want to map over the errors to display them in a UI.
