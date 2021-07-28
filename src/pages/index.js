@@ -68,10 +68,7 @@ const IndexPage = () => (
       <div>
         <h4>See the referece</h4>
         <div className={linksRow}>
-          <Link
-            to="https://github.com/tomek-ch/checc-example-express"
-            className={ctaBtn}
-          >
+          <Link to="/docs/basics" className={ctaBtn}>
             Go to docs
           </Link>
         </div>
