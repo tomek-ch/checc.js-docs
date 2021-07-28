@@ -12,12 +12,15 @@ import { docsArticle } from "../styles/Docs.module.css"
 
 const shortcodes = { Link } // Provide common components here
 
-export default function PageTemplate({ data: { mdx } }) {
+export default function PageTemplate({
+  data: { mdx },
+  location: { pathname },
+}) {
   return (
     <Layout>
       <Seo title={mdx.frontmatter.title} />
       <div className={docsLayout}>
-        <SideBar />
+        <SideBar activePath={pathname} />
         <div className={docsArticle}>
           <MDXProvider components={shortcodes}>
             <MDXRenderer frontmatter={mdx.frontmatter}>{mdx.body}</MDXRenderer>

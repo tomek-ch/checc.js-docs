@@ -6,3 +6,7 @@
 .sideBar > li {
   margin-bottom: 0.5em;
 }
+
+.activeLink {
+  color: var(--highlight);
+}
