@@ -1,4 +1,23 @@
 .docsLayout {
   display: flex;
   gap: 1em;
+  padding: 1em 0;
+}
+
+.docsArticle {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.docsArticle pre {
+  background-color: lightgray;
+  padding: 1em;
+  border-radius: var(--radius);
+}
+
+.docsArticle > p > code {
+  background-color: lightgray;
+  padding: 0.5em;
+  border-radius: var(--radius);
 }

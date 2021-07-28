@@ -8,6 +8,7 @@ import Layout from "./layout"
 import SideBar from "./side-bar"
 import Seo from "./seo"
 import { docsLayout } from "../styles/Docs.module.css"
+import { docsArticle } from "../styles/Docs.module.css"
 
 const shortcodes = { Link } // Provide common components here
 
@@ -17,7 +18,7 @@ export default function PageTemplate({ data: { mdx } }) {
       <Seo title={mdx.frontmatter.title} />
       <div className={docsLayout}>
         <SideBar />
-        <div>
+        <div className={docsArticle}>
           <MDXProvider components={shortcodes}>
             <MDXRenderer frontmatter={mdx.frontmatter}>{mdx.body}</MDXRenderer>
           </MDXProvider>
