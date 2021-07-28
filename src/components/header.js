@@ -7,7 +7,7 @@ const Header = () => (
   <div className={headerOuter}>
     <header className={headerInner}>
       <Link to="/">
-        <h1>Checc.js</h1>
+        <h1>✓Checc.js</h1>
       </Link>
       <nav className={nav}>
         <Link to="/docs">Docs</Link>
