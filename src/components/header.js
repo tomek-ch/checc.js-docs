@@ -10,7 +10,7 @@ const Header = () => (
         <h1>✓Checc.js</h1>
       </Link>
       <nav className={nav}>
-        <Link to="/docs/basics">Docs</Link>
+        <Link to="/docs/basics/">Docs</Link>
         <a href="https://github.com/tomek-ch/checc.js">GitHub</a>
       </nav>
     </header>

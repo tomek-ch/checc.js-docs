@@ -22,8 +22,7 @@ const SideBar = ({ activePath }) => {
       }
     }
   `)
-  console.log(allMdx.nodes[0].id)
-  console.log(activePath)
+
   return (
     <ul className={sideBar}>
       {allMdx.nodes.map(({ frontmatter, fields }) => (
