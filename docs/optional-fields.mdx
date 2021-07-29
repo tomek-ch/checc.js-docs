@@ -1,0 +1,23 @@
+---
+title: "Optional fields"
+id: 5
+---
+
+## Optional fields
+
+You can mark fields as optional to skip their validation if they are `undefined` or one of the values provided in an array:
+
+```
+const schema = {
+  lastName: {
+    minLength: 2,
+    optional: true,
+  },
+  description: {
+    minLength: 2,
+    optional: ['', null],
+  },
+};
+```
+
+In this case `minLength` won't check `lastName` if it's `undefined`. It also won't check `description` if it's an empty string or `null`.

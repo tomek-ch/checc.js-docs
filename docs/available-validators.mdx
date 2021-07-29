@@ -1,0 +1,87 @@
+---
+title: "Available validators"
+id: 8
+---
+
+## Available validators
+
+- `type` - checks if the JavaScript type of a value matches the provided one. Accepts either a string or an object with the `in` property containing an array of strings.
+
+  ```
+  {
+    name: {
+      type: 'string',
+    },
+    age: {
+      type: { in: ['string', 'number'] },
+    },
+  }
+  ```
+
+  While checking the type on the front-end is not necessary because that is something that should be handled by appropriate input types, you should always check the type on the back-end.
+
+- `minLength` - fails if the length is lower than the provided number. Skips validation for values that are neither a string nor an array.
+
+  ```
+  {
+    name: {
+      minLength: 2,
+    },
+    items: {
+      minLength: 1,
+    },
+  }
+  ```
+
+- `maxLength` - fails if the length is greater than the provided number. Skips validation for values that are neither a string nor an array.
+
+  ```
+  {
+    name: {
+      maxLength: 20,
+    },
+    items: {
+      maxLength: 5,
+    },
+  }
+  ```
+
+- `pattern` - tests a string against the provided regular expression. Skips validation for values that are not a string.
+
+  ```
+  {
+    password: {
+      pattern: [/\d/, 'Must include a digit'],
+    },
+  }
+  ```
+
+- `isArray` - fails if the value is or isn't an array depending on the provided boolean constraint.
+
+  ```
+  {
+    items: {
+      isArray: true,
+    },
+  }
+  ```
+
+- `min` - fails if a number is lower than the provided one. Skips validation for values that are not a number.
+
+  ```
+  {
+    age: {
+      min: 15,
+    },
+  }
+  ```
+
+- `max` - fails if a number is greater than the provided one. Skips validation for values that are not a number.
+
+  ```
+  {
+    age: {
+      max: 18,
+    },
+  }
+  ```

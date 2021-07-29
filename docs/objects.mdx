@@ -1,0 +1,73 @@
+---
+title: "Objects"
+id: 4
+---
+
+## Objects
+
+To validate object fields, use the `field` validator:
+
+```
+const schema = {
+  user: {
+    field: {
+      address: {
+        field: {
+          street: {
+            type: 'string',
+          },
+          city: {
+            type: 'string',
+          },
+        },
+      },
+      username: {
+        type: 'string',
+      },
+    },
+  },
+};
+```
+
+As you can see, this works with nested objects. The error output is in the following format:
+
+```
+{
+  user: {
+    address: {
+      street: [],
+      city: [],
+    },
+    username: [],
+  },
+}
+```
+
+### Array of objects
+
+You can combine `all` and `field` to validate an array of objects:
+
+```
+const data = {
+  users: [
+    { username: 'bob' },
+    { username: 'bob2' },
+  ],
+};
+
+const schema = {
+  users: {
+    isArray: true,
+    minLength: 1,
+    all: {
+      field: {
+        username: {
+          type: 'string',
+          minLength: 2,
+        },
+      },
+    },
+  };
+```
+
+Note that the error format for `all` is always a flat array like this: `{ users: [] }`, even for objects. This allows for validation of the array's length and preventing duplicate messages for multiple elements.

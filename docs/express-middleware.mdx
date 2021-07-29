@@ -1,0 +1,41 @@
+---
+title: "Express middleware"
+id: 7
+---
+
+## Express middleware
+
+You can easily integrate checc with an express app using the middleware provided by the library:
+
+```
+const checc = require('checc/middleware');
+
+app.post('/', [
+  checc('body', {
+    username: {
+      custom: async (username, { next }) => {
+        const user = await User
+          .findOne({ username })
+          .catch(next);
+        if (user)
+          return Promise.reject('Username taken');
+      },
+    },
+  }, { keepSchema: false }),
+
+  (req, res) => {
+    const { isValid, errors } = req.checc.body;
+
+    if (!isValid)
+      return res
+        .status(400)
+        .json(errors);
+
+    res.sendStatus(200);
+  },
+]);
+```
+
+This function returns the middleware. It works the same as the regular `checc`, but instead of a data object, it accepts the name of the field inside `req` that you want to validate.
+
+With checc middleware you can access `req`, `res` and `next` from validator context. Validation results are saved to `req.checc.<validated object>`.
