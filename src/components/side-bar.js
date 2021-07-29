@@ -2,9 +2,13 @@ import * as React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import { Link } from "gatsby"
 
-import { sideBar, activeLink } from "../styles/SideBar.module.css"
+import {
+  sideBar,
+  activeLink,
+  openHamburger,
+} from "../styles/SideBar.module.css"
 
-const SideBar = ({ activePath }) => {
+const SideBar = ({ activePath, isHamburgerOpen }) => {
   const { allMdx } = useStaticQuery(graphql`
     query {
       allMdx(sort: { fields: frontmatter___id, order: ASC }) {
@@ -24,7 +28,7 @@ const SideBar = ({ activePath }) => {
   `)
 
   return (
-    <ul className={sideBar}>
+    <ul className={`${sideBar} ${isHamburgerOpen ? openHamburger : ""}`}>
       {allMdx.nodes.map(({ frontmatter, fields }) => (
         <li key={frontmatter.id}>
           <Link

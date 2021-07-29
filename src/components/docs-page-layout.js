@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import { graphql } from "gatsby"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
@@ -16,11 +16,14 @@ export default function PageTemplate({
   data: { mdx },
   location: { pathname },
 }) {
+  const [isHamburgerOpen, setIsHamburgerOpen] = useState(false)
+  const toggleHamburger = () => setIsHamburgerOpen(prev => !prev)
+
   return (
-    <Layout>
+    <Layout toggleHamburger={toggleHamburger} isDocs>
       <Seo title={mdx.frontmatter.title} />
       <div className={docsLayout}>
-        <SideBar activePath={pathname} />
+        <SideBar activePath={pathname} isHamburgerOpen={isHamburgerOpen} />
         <div className={docsArticle}>
           <MDXProvider components={shortcodes}>
             <MDXRenderer frontmatter={mdx.frontmatter}>{mdx.body}</MDXRenderer>

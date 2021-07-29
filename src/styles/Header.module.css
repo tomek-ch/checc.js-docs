@@ -19,3 +19,13 @@
   display: flex;
   gap: 1em;
 }
+
+.hamburgerBtn {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  .hamburgerBtn {
+    display: block;
+  }
+}

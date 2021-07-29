@@ -17,3 +17,20 @@
   background-color: var(--highlight);
   color: white;
 }
+
+@media (max-width: 800px) {
+  .sideBar {
+    display: none;
+    position: fixed;
+    background-color: white;
+    height: 100%;
+    top: 0;
+    left: 0;
+    padding: 1em;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .openHamburger {
+    display: block;
+  }
+}

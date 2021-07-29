@@ -4,10 +4,10 @@ import Header from "./header"
 import Footer from "./footer"
 import { container } from "../styles/Layout.module.css"
 
-const Layout = ({ children }) => {
+const Layout = ({ children, toggleHamburger, isDocs }) => {
   return (
     <>
-      <Header />
+      <Header toggleHamburger={toggleHamburger} isDocs={isDocs} />
       <main className={container}>{children}</main>
       <Footer />
     </>
