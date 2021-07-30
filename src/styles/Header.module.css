@@ -18,10 +18,13 @@
 .nav {
   display: flex;
   gap: 1em;
+  align-items: center;
 }
 
 .hamburgerBtn {
   display: none;
+  font-size: 2em;
+  cursor: pointer;
 }
 
 @media (max-width: 800px) {
