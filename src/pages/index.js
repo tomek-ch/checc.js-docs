@@ -6,15 +6,19 @@ import { welcome } from "../styles/WelcomeSection.module.css"
 import { features } from "../styles/Features.module.css"
 import Layout from "../components/layout"
 import { linksRow, linksHeading } from "../styles/LinksSection.module.css"
+import illustration from "../images/illustration.svg"
 
 const IndexPage = () => (
   <Layout>
     <div className={welcome}>
-      <h1>Reusable validation</h1>
-      <p>For your front-end and back-end.</p>
-      <Link to="/docs/basics/" className={ctaBtn}>
-        Get started
-      </Link>
+      <div>
+        <h1>Reusable validation</h1>
+        <p>For your front-end and back-end.</p>
+        <Link to="/docs/basics/" className={ctaBtn}>
+          Get started
+        </Link>
+      </div>
+      <img src={illustration} alt="" loading="lazy" />
     </div>
     <div className={features}>
       <div>
