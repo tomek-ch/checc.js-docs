@@ -17,8 +17,18 @@
   white-space: pre-wrap;
 }
 
-.docsArticle > p > code {
+.docsArticle p code,
+.docsArticle ul code {
   background-color: lightgray;
   padding: 0.5em;
   border-radius: var(--radius);
+}
+
+.docsArticle ul li {
+  margin-bottom: 2em;
+  margin-left: 1em;
+}
+
+.docsArticle ul pre {
+  margin: 1em 0;
 }
