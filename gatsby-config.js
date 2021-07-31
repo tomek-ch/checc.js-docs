@@ -3,7 +3,7 @@ module.exports = {
     title: `Checc.js`,
     description: `Portable and extensible data validation for JavaScript.`,
     author: `Tomasz Chmielnicki`,
-    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+    siteUrl: `https://checcjs.gatsbyjs.io/`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
