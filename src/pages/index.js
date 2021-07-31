@@ -7,9 +7,11 @@ import { features } from "../styles/Features.module.css"
 import Layout from "../components/layout"
 import { linksRow, linksHeading } from "../styles/LinksSection.module.css"
 import illustration from "../images/illustration.svg"
+import Seo from "../components/seo"
 
 const IndexPage = () => (
   <Layout>
+    <Seo title="Welcome" />
     <div className={welcome}>
       <div>
         <h1>Reusable validation</h1>
