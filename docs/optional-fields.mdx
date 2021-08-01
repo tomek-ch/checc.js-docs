@@ -10,14 +10,14 @@ You can mark fields as optional to skip their validation if they are `undefined`
 ```
 const schema = {
   lastName: {
-    minLength: 2,
+    type: 'string',
     optional: true,
   },
   description: {
-    minLength: 2,
+    type: 'string',
     optional: ['', null],
   },
 };
 ```
 
-In this case `minLength` won't check `lastName` if it's `undefined`. It also won't check `description` if it's an empty string or `null`.
+In this case the `type` validator won't check `lastName` if it's `undefined`. It also won't check `description` if it's an empty string or `null`.
