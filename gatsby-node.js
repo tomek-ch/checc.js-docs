@@ -29,12 +29,15 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   const result = await graphql(`
     query {
-      allMdx {
+      allMdx(sort: { fields: frontmatter___id }) {
         edges {
           node {
             id
             fields {
               slug
+            }
+            frontmatter {
+              title
             }
           }
         }
@@ -46,20 +49,25 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     reporter.panicOnBuild('🚨  ERROR: Loading "createPages" query')
   }
 
-  // Create docs post pages.
   const posts = result.data.allMdx.edges
 
-  // you'll call `createPage` for each result
-  posts.forEach(({ node }) => {
+  const getNextOrPrev = idx => {
+    const data = posts[idx].node
+    return {
+      title: data.frontmatter.title,
+      path: data.fields.slug,
+    }
+  }
+
+  posts.forEach(({ node }, idx) => {
     createPage({
-      // This is the slug you created before
-      // (or `node.frontmatter.slug`)
       path: node.fields.slug,
-      // This component will wrap our MDX content
       component: path.resolve(`./src/components/docs-page-layout.js`),
-      // You can use the values in this context in
-      // our page layout component
-      context: { id: node.id },
+      context: {
+        id: node.id,
+        next: idx === posts.length - 1 ? null : getNextOrPrev(idx + 1),
+        prev: idx === 0 ? null : getNextOrPrev(idx - 1),
+      },
     })
   })
 }

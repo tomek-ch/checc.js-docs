@@ -9,12 +9,14 @@ import SideBar from "./side-bar"
 import Seo from "./seo"
 import { docsLayout } from "../styles/Docs.module.css"
 import { docsArticle } from "../styles/Docs.module.css"
+import PageNav from "./page-nav"
 
 const shortcodes = { Link } // Provide common components here
 
 export default function PageTemplate({
   data: { mdx },
   location: { pathname },
+  pageContext: { prev, next },
 }) {
   const [isHamburgerOpen, setIsHamburgerOpen] = useState(false)
   const toggleHamburger = () => setIsHamburgerOpen(prev => !prev)
@@ -28,6 +30,7 @@ export default function PageTemplate({
           <MDXProvider components={shortcodes}>
             <MDXRenderer frontmatter={mdx.frontmatter}>{mdx.body}</MDXRenderer>
           </MDXProvider>
+          <PageNav {...{ prev, next }} />
         </div>
       </div>
     </Layout>

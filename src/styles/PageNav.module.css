@@ -1,0 +1,13 @@
+.container {
+  display: flex;
+  margin-top: 2em;
+}
+
+.nextLink {
+  margin-left: auto;
+}
+
+.linkLabel {
+  color: #666;
+  font-size: 0.9em;
+}
