@@ -24,38 +24,38 @@ const IndexPage = () => (
     </div>
     <div className={features}>
       <div>
-        <h3>Declarative</h3>
+        <h2>Declarative</h2>
         <p>
           Specify validation rules as schemas using objects. No more ifs and
           pushes.
         </p>
       </div>
       <div>
-        <h3>Portable</h3>
+        <h2>Portable</h2>
         <p>
           Why write the same thing twice? Reuse validation schemas across your
           front-end and back-end.
         </p>
       </div>
       <div>
-        <h3>Composable</h3>
+        <h2>Composable</h2>
         <p>
           Reuse basic schemas with the spread operator and add on to them. No
           magic, pure ES6.
         </p>
       </div>
       <div>
-        <h3>Extensible</h3>
+        <h2>Extensible</h2>
         <p>
           Embed your own validators and create smart error messages. No need to
           repeat yourself.
         </p>
       </div>
     </div>
-    <h3 className={linksHeading}>Get started with Checc.js</h3>
+    <h2 className={linksHeading}>Get started with Checc.js</h2>
     <div className={features}>
       <div>
-        <h4>Front-end or back-end?</h4>
+        <h3>Front-end or back-end?</h3>
         <div className={linksRow}>
           <a
             href="https://github.com/tomek-ch/checc-example-react"
@@ -72,7 +72,7 @@ const IndexPage = () => (
         </div>
       </div>
       <div>
-        <h4>See the referece</h4>
+        <h3>See the referece</h3>
         <div className={linksRow}>
           <Link to="/docs/basics/" className={ctaBtn}>
             Go to docs
