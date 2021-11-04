@@ -10,8 +10,9 @@ import Seo from "./seo"
 import { docsLayout } from "../styles/Docs.module.css"
 import { docsArticle } from "../styles/Docs.module.css"
 import PageNav from "./page-nav"
+import { container } from "../styles/Layout.module.css"
 
-const shortcodes = { Link } // Provide common components here
+const shortcodes = { Link }
 
 export default function PageTemplate({
   data: { mdx },
@@ -23,14 +24,18 @@ export default function PageTemplate({
 
   return (
     <Layout toggleHamburger={toggleHamburger} isDocs>
-      <Seo title={mdx.frontmatter.title} />
-      <div className={docsLayout}>
-        <SideBar activePath={pathname} isHamburgerOpen={isHamburgerOpen} />
-        <div className={docsArticle}>
-          <MDXProvider components={shortcodes}>
-            <MDXRenderer frontmatter={mdx.frontmatter}>{mdx.body}</MDXRenderer>
-          </MDXProvider>
-          <PageNav {...{ prev, next }} />
+      <div className={container}>
+        <Seo title={mdx.frontmatter.title} />
+        <div className={docsLayout}>
+          <SideBar activePath={pathname} isHamburgerOpen={isHamburgerOpen} />
+          <div className={docsArticle}>
+            <MDXProvider components={shortcodes}>
+              <MDXRenderer frontmatter={mdx.frontmatter}>
+                {mdx.body}
+              </MDXRenderer>
+            </MDXProvider>
+            <PageNav {...{ prev, next }} />
+          </div>
         </div>
       </div>
     </Layout>
