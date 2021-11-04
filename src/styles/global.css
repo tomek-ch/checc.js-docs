@@ -5,8 +5,9 @@
 }
 
 :root {
-  --highlight: rebeccapurple;
-  --highlight-dark: rgb(90, 46, 134);
+  --highlight: #0066ff;
+  --highlight-dark: #005ce6;
+  --highlight-light: rgba(0, 102, 255, 0.2);
   --radius: 5px;
 }
 

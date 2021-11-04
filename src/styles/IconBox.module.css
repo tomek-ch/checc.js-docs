@@ -1,0 +1,11 @@
+.iconBox {
+  font-size: 16px;
+  padding: 0.2em;
+  border-radius: var(--radius);
+  background-color: var(--highlight-light);
+  color: var(--highlight);
+  width: 2.5em;
+  height: 2.5em;
+  display: grid;
+  place-content: center;
+}
