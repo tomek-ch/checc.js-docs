@@ -3,14 +3,10 @@ import { Link } from "gatsby"
 
 import { ctaBtn } from "../styles/CtaBtn.module.css"
 import { welcome } from "../styles/WelcomeSection.module.css"
-import { features } from "../styles/Features.module.css"
 import Layout from "../components/layout"
-import { linksContainer } from "../styles/LinksSection.module.css"
 import Seo from "../components/seo"
-import tiles from "../data/tiles.json"
-import links from "../data/links.json"
-import Tile from "../components/tile"
-import LinkBox from "../components/link-box"
+import Tiles from "../components/tiles"
+import Links from "../components/links"
 
 const IndexPage = () => (
   <Layout>
@@ -23,18 +19,9 @@ const IndexPage = () => (
           Get started
         </Link>
       </div>
-      <div className={features}>
-        {tiles.map(tile => (
-          <Tile key={tile.title} {...tile} />
-        ))}
-      </div>
+      <Tiles />
     </div>
-    <h2>Get started with Checc.js</h2>
-    <div className={linksContainer}>
-      {links.map(link => (
-        <LinkBox key={link.title} {...link} />
-      ))}
-    </div>
+    <Links />
   </Layout>
 )
 
