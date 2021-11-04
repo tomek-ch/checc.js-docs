@@ -8,6 +8,8 @@
   --highlight: #0066ff;
   --highlight-dark: #005ce6;
   --highlight-light: rgba(0, 102, 255, 0.2);
+  --gray: #dedede;
+  --gray-lighter: #f7f7f8;
   --radius: 5px;
 }
 

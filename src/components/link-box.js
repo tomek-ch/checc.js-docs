@@ -8,7 +8,7 @@ function LinkBox({ title, body, href, to, Icon }) {
   return (
     <Component {...(href ? { href } : { to })}>
       <h2>
-        <div class={iconBox}>
+        <div className={iconBox}>
           <Icon />
         </div>
         {title}
