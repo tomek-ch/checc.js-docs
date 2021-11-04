@@ -10,4 +10,7 @@
 .linkLabel {
   color: #666;
   font-size: 0.9em;
+  display: flex;
+  align-items: center;
+  gap: 0.2em;
 }
