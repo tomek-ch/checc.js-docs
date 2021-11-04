@@ -6,7 +6,6 @@ import { welcome } from "../styles/WelcomeSection.module.css"
 import { features } from "../styles/Features.module.css"
 import Layout from "../components/layout"
 import { linksRow, linksHeading } from "../styles/LinksSection.module.css"
-import illustration from "../images/illustration.svg"
 import Seo from "../components/seo"
 
 const IndexPage = () => (
@@ -20,7 +19,6 @@ const IndexPage = () => (
           Get started
         </Link>
       </div>
-      <img src={illustration} alt="" loading="lazy" />
     </div>
     <div className={features}>
       <div>
