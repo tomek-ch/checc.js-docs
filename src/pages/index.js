@@ -26,7 +26,7 @@ const IndexPage = () => (
     </div>
     <div className={features}>
       {tiles.map(tile => (
-        <Tile {...tile} />
+        <Tile key={tile.title} {...tile} />
       ))}
     </div>
     <h2 className={linksHeading}>Get started with Checc.js</h2>
