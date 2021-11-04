@@ -7,6 +7,8 @@ import { features } from "../styles/Features.module.css"
 import Layout from "../components/layout"
 import { linksRow, linksHeading } from "../styles/LinksSection.module.css"
 import Seo from "../components/seo"
+import tiles from "../data/tiles.json"
+import Tile from "../components/tile"
 
 const IndexPage = () => (
   <Layout>
@@ -21,34 +23,9 @@ const IndexPage = () => (
       </div>
     </div>
     <div className={features}>
-      <div>
-        <h2>Declarative</h2>
-        <p>
-          Specify validation rules as schemas using objects. No more ifs and
-          pushes.
-        </p>
-      </div>
-      <div>
-        <h2>Portable</h2>
-        <p>
-          Why write the same thing twice? Reuse validation schemas across your
-          front-end and back-end.
-        </p>
-      </div>
-      <div>
-        <h2>Composable</h2>
-        <p>
-          Reuse basic schemas with the spread operator and add on to them. No
-          magic, pure ES6.
-        </p>
-      </div>
-      <div>
-        <h2>Extensible</h2>
-        <p>
-          Embed your own validators and create smart error messages. No need to
-          repeat yourself.
-        </p>
-      </div>
+      {tiles.map(tile => (
+        <Tile {...tile} />
+      ))}
     </div>
     <h2 className={linksHeading}>Get started with Checc.js</h2>
     <div className={features}>
