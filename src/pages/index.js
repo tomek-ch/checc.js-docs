@@ -5,7 +5,7 @@ import { ctaBtn } from "../styles/CtaBtn.module.css"
 import { welcome } from "../styles/WelcomeSection.module.css"
 import { features } from "../styles/Features.module.css"
 import Layout from "../components/layout"
-import { linksHeading, linksContainer } from "../styles/LinksSection.module.css"
+import { linksContainer } from "../styles/LinksSection.module.css"
 import Seo from "../components/seo"
 import tiles from "../data/tiles.json"
 import links from "../data/links.json"
@@ -29,7 +29,7 @@ const IndexPage = () => (
         ))}
       </div>
     </div>
-    <h2 className={linksHeading}>Get started with Checc.js</h2>
+    <h2>Get started with Checc.js</h2>
     <div className={linksContainer}>
       {links.map(link => (
         <LinkBox key={link.title} {...link} />
