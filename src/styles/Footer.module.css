@@ -1,8 +1,4 @@
-.footerOuter {
-  border-top: 1px solid lightgray;
-}
-
-.footerInner {
+.footer {
   max-width: 1200px;
   margin: auto;
   padding: 1em;
