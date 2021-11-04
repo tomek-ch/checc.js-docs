@@ -5,10 +5,12 @@ import { ctaBtn } from "../styles/CtaBtn.module.css"
 import { welcome } from "../styles/WelcomeSection.module.css"
 import { features } from "../styles/Features.module.css"
 import Layout from "../components/layout"
-import { linksRow, linksHeading } from "../styles/LinksSection.module.css"
+import { linksHeading } from "../styles/LinksSection.module.css"
 import Seo from "../components/seo"
 import tiles from "../data/tiles.json"
+import links from "../data/links.json"
 import Tile from "../components/tile"
+import LinkBox from "../components/link-box"
 
 const IndexPage = () => (
   <Layout>
@@ -29,31 +31,9 @@ const IndexPage = () => (
     </div>
     <h2 className={linksHeading}>Get started with Checc.js</h2>
     <div className={features}>
-      <div>
-        <h3>Front-end or back-end?</h3>
-        <div className={linksRow}>
-          <a
-            href="https://github.com/tomek-ch/checc-example-react"
-            className={ctaBtn}
-          >
-            React example
-          </a>
-          <a
-            href="https://github.com/tomek-ch/checc-example-express"
-            className={ctaBtn}
-          >
-            Express example
-          </a>
-        </div>
-      </div>
-      <div>
-        <h3>See the referece</h3>
-        <div className={linksRow}>
-          <Link to="/docs/basics/" className={ctaBtn}>
-            Go to docs
-          </Link>
-        </div>
-      </div>
+      {links.map(link => (
+        <LinkBox key={link.title} {...link} />
+      ))}
     </div>
   </Layout>
 )
