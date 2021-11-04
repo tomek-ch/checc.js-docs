@@ -7,12 +7,16 @@ import {
   nav,
   hamburgerBtn,
 } from "../styles/Header.module.css"
+import Check from "./icons/check"
 
 const Header = ({ toggleHamburger, isDocs }) => (
   <div className={headerOuter}>
     <header className={headerInner}>
       <Link to="/">
-        <h1>✓Checc.js</h1>
+        <h1>
+          <Check />
+          Checc.js
+        </h1>
       </Link>
       <nav className={nav}>
         <Link to="/docs/basics/">Docs</Link>
