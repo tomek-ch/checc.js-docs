@@ -1,17 +1,26 @@
 .features {
-  display: flex;
-  flex-wrap: wrap;
-  /* grid-template-columns: 1fr 1fr; */
-  gap: 1em;
-  padding-bottom: 2em;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2em;
 }
 
-.features > div {
-  flex: 1 1 0px;
-  min-width: 20em;
+.tile {
   padding: 2em;
   border: 1px solid lightgray;
   border-radius: var(--radius);
+}
+
+.tile:first-child {
+  margin-bottom: 2em;
+}
+
+.tile:nth-child(2) {
+  margin-top: 2em;
+}
+
+.tile:nth-child(3) {
+  margin-top: -2em;
+  margin-bottom: 2em;
 }
 
 .features h3 {
