@@ -17,7 +17,7 @@
 
 .nextLink:hover,
 .prevLink:hover {
-  background-color: var(--gray);
+  background-color: var(--foreground-high-contrast);
 }
 
 .linkLabel {

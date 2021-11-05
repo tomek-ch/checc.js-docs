@@ -20,7 +20,7 @@
 }
 
 .sideBar > li > a:not(.activeLink):hover {
-  background-color: var(--gray);
+  background-color: var(--foreground-high-contrast);
 }
 
 @media (max-width: 800px) {

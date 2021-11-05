@@ -20,6 +20,12 @@
   align-items: center;
 }
 
+.themeBtn {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
 .hamburgerBtn {
   display: none;
   font-size: 2em;
@@ -30,12 +36,21 @@
   transition: color 150ms;
 }
 
-.header a:hover {
+.header button {
+  color: inherit;
+}
+
+.header a:hover,
+.header button:hover {
   color: var(--highlight);
 }
 
 @media (max-width: 800px) {
   .hamburgerBtn {
     display: block;
+  }
+
+  .hiddenDocsBtn {
+    display: none;
   }
 }

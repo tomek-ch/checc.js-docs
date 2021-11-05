@@ -8,7 +8,7 @@
 .linksSection {
   padding-top: 2em;
   padding-bottom: 1em;
-  background-color: var(--gray-lighter);
+  background-color: var(--foreground);
 }
 
 @media (min-width: 1000px) {

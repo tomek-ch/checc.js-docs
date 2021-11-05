@@ -8,8 +8,11 @@
   --highlight: #0066ff;
   --highlight-dark: #005ce6;
   --highlight-light: rgba(0, 102, 255, 0.2);
-  --gray: #dedede;
-  --gray-lighter: #f7f7f8;
+  --foreground-high-contrast: #dedede;
+  --foreground: #f7f7f8;
+  --background: #fff;
+  --tile-color: var(--background);
+  --text: #000;
   --radius: 5px;
 }
 
@@ -22,6 +25,8 @@ body {
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial,
     sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
   line-height: 1.5;
+  background-color: var(--background);
+  color: var(--text);
 }
 
 a {

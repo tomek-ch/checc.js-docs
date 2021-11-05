@@ -1,8 +1,14 @@
 import * as React from "react"
 import { Link } from "gatsby"
 
-import { header, nav, hamburgerBtn } from "../styles/Header.module.css"
+import {
+  header,
+  nav,
+  hamburgerBtn,
+  hiddenDocsBtn,
+} from "../styles/Header.module.css"
 import Check from "./icons/check"
+import ThemeToggle from "./theme-toggle"
 
 const Header = ({ toggleHamburger, isDocs }) => (
   <header className={header}>
@@ -13,7 +19,10 @@ const Header = ({ toggleHamburger, isDocs }) => (
       </h1>
     </Link>
     <nav className={nav}>
-      <Link to="/docs/basics/">Docs</Link>
+      <ThemeToggle />
+      <Link to="/docs/basics/" className={isDocs ? hiddenDocsBtn : ""}>
+        Docs
+      </Link>
       <a href="https://github.com/tomek-ch/checc.js">GitHub</a>
       {isDocs && (
         <button onClick={toggleHamburger} className={hamburgerBtn}>

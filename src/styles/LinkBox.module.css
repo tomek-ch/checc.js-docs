@@ -7,7 +7,7 @@
 }
 
 .linkBox:hover {
-  background-color: var(--gray);
+  background-color: var(--foreground-high-contrast);
 }
 
 .linkBox h2 {
