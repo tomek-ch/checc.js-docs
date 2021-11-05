@@ -26,3 +26,22 @@
 .tile h2 {
   margin: 0.3em 0;
 }
+
+@media (max-width: 500px) {
+  .features {
+    grid-template-columns: 1fr;
+  }
+
+  .tile:first-child {
+    margin-bottom: 0;
+  }
+
+  .tile:nth-child(2) {
+    margin-top: 0;
+  }
+
+  .tile:nth-child(3) {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
