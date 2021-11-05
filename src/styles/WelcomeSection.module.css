@@ -11,5 +11,20 @@
 }
 
 .welcome > div > p {
-  margin: 0.5em 0;
+  margin: 1em 0;
+}
+
+@media (max-width: 1000px) {
+  .welcome {
+    flex-direction: column;
+    gap: 5em;
+  }
+
+  .welcome > div:first-child {
+    text-align: center;
+  }
+
+  .welcome a {
+    margin: auto;
+  }
 }
