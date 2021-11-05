@@ -26,6 +26,14 @@
   cursor: pointer;
 }
 
+.header a {
+  transition: color 150ms;
+}
+
+.header a:hover {
+  color: var(--highlight);
+}
+
 @media (max-width: 800px) {
   .hamburgerBtn {
     display: block;
