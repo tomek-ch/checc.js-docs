@@ -13,7 +13,7 @@
 }
 
 .docsArticle pre {
-  background-color: lightgray;
+  background-color: var(--gray);
   padding: 1em;
   border-radius: var(--radius);
   white-space: pre-wrap;
@@ -21,7 +21,7 @@
 
 .docsArticle p code,
 .docsArticle ul > code {
-  background-color: lightgray;
+  background-color: var(--gray);
   padding: 0.3em;
   border-radius: var(--radius);
 }
