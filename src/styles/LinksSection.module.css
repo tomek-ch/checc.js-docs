@@ -4,34 +4,6 @@
   margin-top: 1em;
 }
 
-.linksContainer a {
-  flex: 1 1 0;
-  margin-top: 1em;
-  margin-bottom: 2em;
-  padding: 1em;
-  border-radius: var(--radius);
-  max-width: 330px;
-  transition: all 150ms;
-}
-
-.linksContainer a:hover {
-  background-color: var(--gray);
-}
-
-.linksContainer a:first-child {
-  margin-left: -1em;
-}
-
-.linksContainer a:last-child {
-  margin-right: -1em;
-}
-
-.linksContainer h2 {
-  display: flex;
-  align-items: center;
-  gap: 0.2em;
-}
-
 .linksSection {
   margin: 1em 0;
   padding-top: 2em;
