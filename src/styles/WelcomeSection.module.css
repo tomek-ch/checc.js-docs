@@ -20,6 +20,12 @@
     gap: 5em;
   }
 
+  .welcome h1 {
+    white-space: normal;
+  }
+}
+
+@media (max-width: 1000px) and (min-width: 550px) {
   .welcome > div:first-child {
     text-align: center;
   }
