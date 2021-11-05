@@ -5,7 +5,7 @@ const Context = createContext()
 
 const cssVariables = {
   "--background": {
-    dark: "#000",
+    dark: "rgba(0, 0, 0, 0.9)",
     light: "#fff",
   },
   "--foreground": {
