@@ -7,12 +7,6 @@
 :root {
   --highlight: #0066ff;
   --highlight-dark: #005ce6;
-  --highlight-light: rgba(0, 102, 255, 0.2);
-  --foreground-high-contrast: #dedede;
-  --foreground: #f7f7f8;
-  --background: #fff;
-  --tile-color: var(--background);
-  --text: #000;
   --radius: 5px;
 }
 
