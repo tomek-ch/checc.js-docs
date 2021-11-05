@@ -7,6 +7,19 @@
   margin-left: auto;
 }
 
+.nextLink,
+.prevLink {
+  width: fit-content;
+  padding: 1em;
+  border-radius: var(--radius);
+  transition: background-color 150ms;
+}
+
+.nextLink:hover,
+.prevLink:hover {
+  background-color: var(--gray);
+}
+
 .linkLabel {
   color: #666;
   font-size: 0.9em;

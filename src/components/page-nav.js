@@ -1,7 +1,12 @@
 import { Link } from "gatsby"
 import React from "react"
 
-import { container, nextLink, linkLabel } from "../styles/PageNav.module.css"
+import {
+  container,
+  nextLink,
+  prevLink,
+  linkLabel,
+} from "../styles/PageNav.module.css"
 import { inlineLink } from "../styles/InlineLink.module.css"
 import ArrowRight from "./icons/arrow-right"
 import ArrowLeft from "./icons/arrow-left"
@@ -10,7 +15,7 @@ const PageNav = ({ prev, next }) => {
   return (
     <nav className={container}>
       {prev && (
-        <Link to={prev.path}>
+        <Link to={prev.path} className={prevLink}>
           <div className={linkLabel}>
             <ArrowLeft size="14" />
             Previous
