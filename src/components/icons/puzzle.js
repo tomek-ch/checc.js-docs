@@ -1,13 +1,13 @@
 import React from "react"
 
-function Puzzle() {
+function Puzzle({ size = "24" }) {
   return (
     <svg
       fill="#000000"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 32 32"
-      width="32px"
-      height="32px"
+      width={size}
+      height={size}
     >
       <path
         fill="currentColor"

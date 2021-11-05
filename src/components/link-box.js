@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import ArrowRight from "./icons/arrow-right"
-import { iconBox } from "../styles/IconBox.module.css"
+import { iconBox, smallIconBox } from "../styles/IconBox.module.css"
 import { linkBox } from "../styles/LinkBox.module.css"
 
 function LinkBox({ title, body, href, to, Icon }) {
@@ -9,8 +9,8 @@ function LinkBox({ title, body, href, to, Icon }) {
   return (
     <Component {...(href ? { href } : { to })} className={linkBox}>
       <h2>
-        <div className={iconBox}>
-          <Icon />
+        <div className={`${iconBox} ${smallIconBox}`}>
+          <Icon size="16" />
         </div>
         {title}
         <ArrowRight />

@@ -2,8 +2,13 @@
   border-radius: var(--radius);
   background-color: var(--highlight-light);
   color: var(--highlight);
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 2rem;
+  height: 2rem;
   display: grid;
   place-content: center;
+}
+
+.smallIconBox {
+  width: 1.5rem;
+  height: 1.5rem;
 }
