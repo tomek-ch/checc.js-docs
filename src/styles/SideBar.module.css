@@ -27,7 +27,7 @@
   .sideBar {
     display: none;
     position: fixed;
-    background-color: white;
+    background-color: var(--background);
     height: 100%;
     top: 0;
     left: 0;
