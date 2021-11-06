@@ -32,7 +32,7 @@ const cssVariables = {
 
 function ThemeContextProvider({ children }) {
   const [isDarkTheme, setIsDarkTheme] = useState(
-    JSON.parse(localStorage.getItem("isDarkTheme"))
+    window ? JSON.parse(localStorage.getItem("isDarkTheme")) : false
   )
 
   const toggleTheme = () => {
