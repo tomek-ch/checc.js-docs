@@ -30,9 +30,11 @@ const cssVariables = {
   },
 }
 
+const isClient = typeof window !== "undefined"
+
 function ThemeContextProvider({ children }) {
   const [isDarkTheme, setIsDarkTheme] = useState(
-    window ? JSON.parse(localStorage.getItem("isDarkTheme")) : false
+    isClient ? JSON.parse(localStorage.getItem("isDarkTheme")) : false
   )
 
   const toggleTheme = () => {
@@ -41,9 +43,14 @@ function ThemeContextProvider({ children }) {
   }
 
   useEffect(() => {
-    const theme = isDarkTheme ? "dark" : "light"
-    for (let key in cssVariables) {
-      document.documentElement.style.setProperty(key, cssVariables[key][theme])
+    if (isClient) {
+      const theme = isDarkTheme ? "dark" : "light"
+      for (let key in cssVariables) {
+        document.documentElement.style.setProperty(
+          key,
+          cssVariables[key][theme]
+        )
+      }
     }
   }, [isDarkTheme])
 
