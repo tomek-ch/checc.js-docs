@@ -1,6 +1,6 @@
 import React from "react"
 import Tile from "../components/tile"
-import tiles from "../data/tiles.json"
+import tiles from "../data/tiles.js"
 import { features } from "../styles/Features.module.css"
 
 import Puzzle from "./icons/puzzle"

@@ -1,5 +1,5 @@
 import React from "react"
-import links from "../data/links.json"
+import links from "../data/links.js"
 import LinkBox from "../components/link-box"
 import { linksContainer, linksSection } from "../styles/LinksSection.module.css"
 import { container } from "../styles/Layout.module.css"
